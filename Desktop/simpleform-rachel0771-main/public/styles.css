@@ -1,0 +1,47 @@
+/* Basic styling for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#userForm {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(217, 222, 187);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(236, 233, 130, 0.911);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(231, 210, 94);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(216, 185, 84);
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #579ae3;
+    color: rgb(242, 199, 230);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #66a0de;
+}
