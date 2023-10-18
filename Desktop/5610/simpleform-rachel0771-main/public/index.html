@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Homework Title</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Add other metadata or links to CSS files if needed -->
+</head>
+
+<body>
+    <div id="cookie"></div>
+    <div style="border: 1px solid black; padding: 10px; margin-top: 20px;"></div>
+
+    <script>
+        const cookies = document.cookie.split(';');
+        console.log(cookies);
+        for (let i = 0; i < cookies.length; i++) {
+            const split = cookies[i].split('=');
+            if (split[0].trim() === "bestcookie") {
+                document.getElementById("cookie").innerHTML = split[1];
+                break;
+            }
+        }
+    </script>
+
+    <div id="userForm">
+        <h1>Pet Information</h1>
+        <form action="/submit" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="petname">Pet Name:</label>
+                    <input type="text" id="petname" name="petname">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age">
+                </div>
+
+                <div class="form-group">
+                    <label for="specie">Specie:</label>
+                    <select id="specie" name="specie">
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span>Gender:</span>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                </div>
+
+                <div class="form-group">
+                    <label for="remark">Remark:</label>
+                    <input type="text" id="remark" name="remark">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
