@@ -2,19 +2,36 @@
 <html lang="en">
 
 <head>
+    <!-- Character Set Declaration for UTF-8 -->
     <meta charset="UTF-8">
+
+    <!-- Responsive meta tag to control layout on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the document -->
     <title>Your Homework Title</title>
+
+    <!-- Link to the favicon icon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="/styles.css">
-    <!-- Add other metadata or links to CSS files if needed -->
+    <!-- (You can add other metadata or links to CSS files if needed) -->
 </head>
 
 <body>
+    <!-- Placeholder div to display value of "bestcookie" from browser cookies -->
     <div id="cookie"></div>
+
+    <!-- A styled div for potential content or styling purposes -->
     <div style="border: 1px solid black; padding: 10px; margin-top: 20px;"></div>
 
     <script>
+        /* JavaScript section to:
+         * 1. Retrieve browser cookies
+         * 2. Parse cookies to find "bestcookie" value
+         * 3. Display the value inside the "cookie" div
+         */
         const cookies = document.cookie.split(';');
         console.log(cookies);
         for (let i = 0; i < cookies.length; i++) {
@@ -26,20 +43,25 @@
         }
     </script>
 
+    <!-- User form section for collecting pet information -->
     <div id="userForm">
         <h1>Pet Information</h1>
         <form action="/submit" method="post">
             <fieldset>
+
+                <!-- Input field for pet's name -->
                 <div class="form-group">
                     <label for="petname">Pet Name:</label>
                     <input type="text" id="petname" name="petname">
                 </div>
 
+                <!-- Input field for pet's age -->
                 <div class="form-group">
                     <label for="age">Age:</label>
                     <input type="number" id="age" name="age">
                 </div>
 
+                <!-- Dropdown selection for pet's specie -->
                 <div class="form-group">
                     <label for="specie">Specie:</label>
                     <select id="specie" name="specie">
@@ -49,6 +71,7 @@
                     </select>
                 </div>
 
+                <!-- Radio buttons for selecting pet's gender -->
                 <div class="form-group">
                     <span>Gender:</span>
                     <label for="male">Male</label>
@@ -57,14 +80,17 @@
                     <input type="radio" id="female" name="gender" value="female">
                 </div>
 
+                <!-- Input field for any additional remarks about the pet -->
                 <div class="form-group">
                     <label for="remark">Remark:</label>
                     <input type="text" id="remark" name="remark">
                 </div>
 
+                <!-- Submission button for the form -->
                 <div class="form-group">
                     <input type="submit" value="Submit">
                 </div>
+                
             </fieldset>
         </form>
     </div>
