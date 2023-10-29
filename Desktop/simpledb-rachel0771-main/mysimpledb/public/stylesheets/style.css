@@ -1,0 +1,82 @@
+/* Basic styling for the entire document */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #faf3e0;
+}
+
+.birdinfo-button {
+  display: block;
+  margin: 20px 0;
+  text-align: center; 
+}
+
+.birdinfo-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a2846e;
+  color: #faf3e0;
+  text-decoration: none; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.birdinfo-button a:hover {
+  background-color: #de8b71;
+  color: #f7e7e0;
+}
+
+
+#userForm {
+  width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f7e7e0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(236, 233, 130, 0.5);
+}
+
+h1 {
+  text-align: center;
+  color: #a2846e;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6c5b7b;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #d8baa4;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ffc1a1;
+  color: #6c5b7b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffa885;
+}
+
+
+
+/*Citation: Little Red Book */

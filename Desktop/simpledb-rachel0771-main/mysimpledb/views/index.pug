@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    title SimpleDB -- RUIMENG ZHANG 
+  
+    link(rel="icon", href="/favicon.ico", type="image/x-icon")
+    
+    link(rel="stylesheet", href="/styles.css")
+  body
+    #cookie
+    div(style="border: 1px solid black; padding: 10px; margin-top: 20px;")
+    
+    script.
+      /* JavaScript section to:
+       * 1. Retrieve browser cookies
+       * 2. Parse cookies to find "bestcookie" value
+       * 3. Display the value inside the "cookie" div
+       */
+      const cookies = document.cookie.split(';');
+      console.log(cookies);
+      for (let i = 0; i < cookies.length; i++) {
+          const split = cookies[i].split('=');
+          if (split[0].trim() === "bestcookie") {
+              document.getElementById("cookie").innerHTML = split[1];
+              break;
+          }
+      }
+    
+    #userForm
+      h1 Pet Information
+      form(action="/submit", method="post")
+        fieldset
+        
+          .form-group
+            label(for="petname") Pet Name:
+            input(type="text", id="petname", name="petname")
+          
+          .form-group
+            label(for="age") Age:
+            input(type="number", id="age", name="age")
+          
+          .form-group
+            label(for="specie") Specie:
+            select(id="specie", name="specie")
+              option(value="cat") Cat
+              option(value="dog") Dog
+              option(value="other") Other
+          
+          .form-group
+            span Gender:
+            label(for="male") Male
+            input(type="radio", id="male", name="gender", value="male")
+            label(for="female") Female
+            input(type="radio", id="female", name="gender", value="female")
+          
+            label(for="remark") Remark:
+            input(type="text", id="remark", name="remark")
+          
+          .form-group
+            input(type="submit", value="Submit")
