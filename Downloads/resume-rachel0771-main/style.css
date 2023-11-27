@@ -1,0 +1,113 @@
+/* Base styles */
+body, h1, p, a, button {
+    font-family: 'Times New Roman', serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Times New Roman', serif;
+    background-color: transparent;
+}
+
+/* Light Theme Styles */
+body {
+    background-color: #fdfcf8; /* Soft ivory */
+    color: #6b705c; /* Olive drab */
+}
+
+nav {
+    background-color: #ffe8d6; /* Light apricot */
+}
+
+nav ul li a {
+    color: #6b705c; /* Olive drab */
+}
+
+button {
+    color: #6b705c; /* Olive drab */
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #3d405b; /* Dark slate gray */
+    color: #f4f1de; /* Off white */
+}
+
+body.dark-theme nav {
+    background-color: #81b29a; /* Teal green */
+}
+
+body.dark-theme nav ul li a {
+    color: #f4f1de; /* Off white */
+}
+
+body.dark-theme button {
+    border-color: #f2cc8f; /* Sand */
+    color: #f4f1de; /* Off white */
+}
+
+/* Additional styling for other elements as needed... */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffe8d6; /* Light apricot */
+    color: #6b705c; /* Olive drab */
+}
+
+body.dark-theme footer {
+    background-color: #81b29a; /* Teal green */
+    color: #f4f1de; /* Off white */
+}
+
+/* Projects Page Specific Styles */
+main {
+    padding: 20px;
+}
+
+.project {
+    background-color: #f8f0e3; /* Very light pink for a subtle contrast */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.project h2 {
+    color: #cb997e; /* Soft brown */
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #6b705c; /* Olive drab */
+    line-height: 1.6;
+}
+
+/* Dark Theme Adjustments for Projects Page */
+body.dark-theme .project {
+    background-color: #2b2d42; /* Dark slate blue */
+    color: #edf2f4; /* Off white */
+}
+
+body.dark-theme .project h2 {
+    color: #8d99ae; /* Greyish blue */
+}
+
+body.dark-theme .project p {
+    color: #edf2f4; /* Off white */
+}
