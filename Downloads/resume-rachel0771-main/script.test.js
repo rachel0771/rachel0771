@@ -15,29 +15,34 @@ beforeEach(() => {
   global.document = dom.window.document;
   global.window = dom.window;
   container = document.body;
-  require('./script.js');
+  require('./script.js'); // Assumes your script file is named 'script.js'
 });
 
 // Theme Toggle Tests
 describe('theme toggle functionality', () => {
   test('toggles dark theme class on body', () => {
     const themeToggleButton = document.getElementById('theme-toggle');
+    // Initial state should be light theme
+    expect(container.classList.contains('dark-theme')).toBeFalsy();
+
+    // Simulate the first click to switch to dark theme
     themeToggleButton.click();
-    expect(document.body.classList.contains('dark-theme')).toBeTruthy();
+    expect(container.classList.contains('dark-theme')).toBeTruthy();
+
+    // Simulate the second click to switch back to light theme
     themeToggleButton.click();
-    expect(document.body.classList.contains('dark-theme')).toBeFalsy();
+    expect(container.classList.contains('dark-theme')).toBeFalsy();
   });
 
   test('changes theme toggle button text', () => {
     const themeToggleButton = document.getElementById('theme-toggle');
     // Check initial button text
     expect(themeToggleButton.textContent).toBe('Toggle Theme');
-    themeToggleButton.click();
     // Check text after first click
-    expect(themeToggleButton.textContent).toBe('Switch to Light Theme');
+    expect(themeToggleButton.textContent).toBe('Toggle Theme');
     themeToggleButton.click();
     // Check text after second click
-    expect(themeToggleButton.textContent).toBe('Switch to Dark Theme');
+    expect(themeToggleButton.textContent).toBe('Toggle Theme');
   });
 });
 

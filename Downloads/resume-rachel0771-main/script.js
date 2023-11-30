@@ -1,13 +1,22 @@
 // Theme Toggle Functionality
 const themeToggleButton = document.getElementById('theme-toggle');
 
+function switchToDark() {
+    document.body.classList.add('dark-theme');
+    themeToggleButton.textContent = 'Switch to Light Theme';
+}
+
+function switchToLight() {
+    document.body.classList.remove('dark-theme');
+    themeToggleButton.textContent = 'Switch to Dark Theme';
+}
+
 if (themeToggleButton) {
     themeToggleButton.addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
         if (document.body.classList.contains('dark-theme')) {
-            themeToggleButton.textContent = 'Switch to Light Theme';
+            switchToLight();
         } else {
-            themeToggleButton.textContent = 'Switch to Dark Theme';
+            switchToDark();
         }
     });
 } else {
